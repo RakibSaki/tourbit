@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    transform: scaleY(-1);
+}
+
+#orbiter {
+    --radius: 10px;
+    background-color: aquamarine;
+}
+
+#orbitee {
+    --radius: 30px;
+    background-image: radial-gradient(closest-side, white, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.25) , transparent)
+}
+
+#orbiter, #orbitee {
+    position: absolute;
+    top: calc(50vh - var(--radius));
+    left: calc(50vw - var(--radius));
+    width: calc(var(--radius) * 2);
+    height: calc(var(--radius) * 2);
+    border-radius: 50%;
+}
