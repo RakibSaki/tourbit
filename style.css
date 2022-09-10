@@ -1,0 +1,50 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+}
+
+body > * {
+    position: absolute;
+}
+
+#star, #planet {
+    border-radius: 50%;
+    top: calc(50% - (var(--w) / 2));
+    left: calc(50% - (var(--w) / 2));
+}
+
+#orbit {
+    
+}
+
+#orbit {
+    --wx: 400px;
+    --wy: 200px;
+    top: calc(50% - (var(--wy) / 2));
+    left: calc(50% - (var(--wx) / 2));
+    width: var(--wx);
+    height: var(--wy);
+    border-radius: calc(var(--wx) / 2)/calc(var(--wy) / 2);
+    border: 2px solid rgb(255, 255, 255, 200)
+}
+
+#star {
+    --w: 50px;
+    width: var(--w);
+    height: var(--w);
+    background-image: radial-gradient(closest-side, aliceblue, rgb(255, 255, 255, 200),transparent);
+}
+
+#planet {
+    --w: 10px;
+    width: var(--w);
+    height: var(--w);
+    background-color: aquamarine;
+    z-index: 1;
+}
+
+main {
+    display: none;
+}
